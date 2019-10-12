@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:sipuadart/sdp/protocol_version/protocol_version.dart';
-import 'package:sipuadart/sdp/session_information/session_information.dart';
-import 'package:sipuadart/sdp/session_name/session_name.dart';
+import 'package:sipuadart/sdp/protocol_version.dart';
+import 'package:sipuadart/sdp/session_information.dart';
+import 'package:sipuadart/sdp/session_name.dart';
 
 void main() {
 
