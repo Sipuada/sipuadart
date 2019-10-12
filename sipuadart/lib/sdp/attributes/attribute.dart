@@ -18,23 +18,23 @@ import 'package:sipuadart/sdp/field.dart';
 /// example might be the conference's floor control policy.
 ///
 /// Attribute fields may be of two forms:
-//
-//   * property attributes.  A property attribute is simply of the form
-//     "a=<flag>".  These are binary attributes, and the presence of the
-//     attribute conveys that the attribute is a property of the session.
-//     An example might be "a=recvonly".
-//
-//   * value attributes.  A value attribute is of the form
-//     "a=<attribute>:<value>".  An example might be that a whiteboard
-//     could have the value attribute "a=orient:landscape"
-//
-//   Attribute interpretation depends on the media tool being invoked.
-//   Thus receivers of session descriptions should be configurable in
-//   their interpretation of announcements in general and of attributes in
-//   particular.
-//
-//   Attribute names must be in the US-ASCII subset of ISO-10646/UTF-8.
-/// v
+///
+///   * property attributes.  A property attribute is simply of the form
+///     "a=<flag>".  These are binary attributes, and the presence of the
+///     attribute conveys that the attribute is a property of the session.
+///     An example might be "a=recvonly".
+///
+///   * value attributes.  A value attribute is of the form
+///     "a=<attribute>:<value>".  An example might be that a whiteboard
+///     could have the value attribute "a=orient:landscape"
+///
+///   Attribute interpretation depends on the media tool being invoked.
+///   Thus receivers of session descriptions should be configurable in
+///   their interpretation of announcements in general and of attributes in
+///   particular.
+///
+///   Attribute names must be in the US-ASCII subset of ISO-10646/UTF-8.
+///
 abstract class Attribute implements Field {
 
   static const _a = 97;
