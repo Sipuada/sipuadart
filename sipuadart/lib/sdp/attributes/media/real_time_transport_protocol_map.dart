@@ -10,6 +10,4 @@ class RealTimeTransportProtocolMap extends Attribute {
 
   RealTimeTransportProtocolMap(final String value) : super(_level, _attribute, value);
 
-  RealTimeTransportProtocolMap.empty() : this("");
-
 }
