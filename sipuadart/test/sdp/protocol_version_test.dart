@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:sipuadart/sdp/version/protocol_version.dart';
+import 'package:sipuadart/sdp/protocol_version/protocol_version.dart';
 
 void main() {
 
@@ -12,7 +12,7 @@ void main() {
       expect(_protocol, String.fromCharCode(_typeV));
     });
 
-    test('build a standard protocol version', () {
+    test('build a standard protocol protocol_version', () {
       final protocolVersion = ProtocolVersion.standard();
       final version = 0;
       expect(protocolVersion.version, version);
@@ -20,7 +20,7 @@ void main() {
       expect(protocolVersion.toString(), '$_protocol=$version');
     });
 
-    test('build a protocol version', () {
+    test('build a protocol protocol_version', () {
       final version = 1;
       final protocolVersion = ProtocolVersion(version);
       expect(protocolVersion.version, version);

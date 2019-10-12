@@ -35,7 +35,7 @@ import 'package:sipuadart/sdp/field.dart';
 //
 //   Attribute names must be in the US-ASCII subset of ISO-10646/UTF-8.
 /// v
-abstract class Attribute extends Field {
+abstract class Attribute implements Field {
 
   static const _a = 97;
 

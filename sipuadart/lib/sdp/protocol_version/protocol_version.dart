@@ -1,6 +1,6 @@
 import 'package:sipuadart/sdp/field.dart';
 
-class ProtocolVersion extends Field {
+class ProtocolVersion implements Field {
 
   static const _v = 118;
   static const _defaultVersion = 0;

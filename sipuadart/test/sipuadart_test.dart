@@ -161,7 +161,7 @@ void main() {
 
     test('build an attribute tool', () {
       final tool = "tool";
-      final value = "<name and version of tool>";
+      final value = "<name and protocol_version of tool>";
       final attribute = Tool(value);
       expect(attribute.type, _typeA);
       expect(attribute.attribute, tool);
