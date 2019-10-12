@@ -1,4 +1,5 @@
 
+import 'package:sipuadart/sdp/attributes/attribute_level.dart';
 import 'package:sipuadart/sdp/field.dart';
 
 /// https://tools.ietf.org/html/rfc4566#page-24
@@ -18,12 +19,12 @@ import 'package:sipuadart/sdp/field.dart';
 ///
 /// Attribute fields may be of two forms:
 //
-//   o property attributes.  A property attribute is simply of the form
+//   * property attributes.  A property attribute is simply of the form
 //     "a=<flag>".  These are binary attributes, and the presence of the
 //     attribute conveys that the attribute is a property of the session.
 //     An example might be "a=recvonly".
 //
-//   o value attributes.  A value attribute is of the form
+//   * value attributes.  A value attribute is of the form
 //     "a=<attribute>:<value>".  An example might be that a whiteboard
 //     could have the value attribute "a=orient:landscape"
 //
@@ -36,18 +37,22 @@ import 'package:sipuadart/sdp/field.dart';
 /// v
 abstract class Attribute extends Field {
 
+  static const _a = 97;
+
+  AttributeLevel _level;
   String _attribute;
-
   String _value;
+  final int _type = _a;
 
-  final int _type = 'a'.codeUnitAt(0);
-
-  Attribute(this._attribute, this._value);
+  Attribute(this._level, this._attribute, this._value);
 
   Attribute.empty() {
+    _level = AttributeLevel.none;
     _attribute = "";
     _value = "";
   }
+
+  AttributeLevel get level => _level;
 
   String get attribute => _attribute;
 
