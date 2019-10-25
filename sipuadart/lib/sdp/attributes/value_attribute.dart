@@ -35,7 +35,7 @@ import 'package:sipuadart/sdp/field.dart';
 ///
 ///   Attribute names must be in the US-ASCII subset of ISO-10646/UTF-8.
 ///
-abstract class Attribute extends Field {
+abstract class ValueAttribute extends Field {
 
   static const _a = 97;
 
@@ -44,9 +44,9 @@ abstract class Attribute extends Field {
   String _value;
   final int _type = _a;
 
-  Attribute(this._level, this._attribute, this._value);
+  ValueAttribute(this._level, this._attribute, this._value);
 
-  Attribute.empty() {
+  ValueAttribute.empty() {
     _level = AttributeLevel.none;
     _attribute = "";
     _value = "";
